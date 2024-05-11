@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Font Logo */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.logo {
+  font-family: "Bangers", system-ui;
+  font-weight: 800;
+  font-size: 16px;
+  color: #004a79;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply text-primary bg-body;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  p {
+    @apply text-secondary;
+  }
+  .h1 {
+    @apply text-[36px] xl:text-[64px] text-primary xl:leading-[72px] font-[800] mb-[18px];
+  }
+  .h2 {
+    @apply text-[36px] mb-[24px] font-[700]
+  }
+  .h3 {
+    @apply text-[20px] mb-[16px] font-[600]
+  }
+  .description {
+    @apply text-[16px] xl:text-[20px] xl:leading-[32px]
+  }
+  .section {
+    @apply w-full h-screen pt-[60px] xl:pt-[120px]
+  }
+  .btn {
+    @apply rounded- [10px] w-full uppercase font-medium text-white tracking-[2px] text-[13px] flex justify-center items-center transition-all duration-300;
+  }
+  .btn-sm {
+    @apply h-[56px]
+  }
+  .btn-lg {
+    @apply h-[64px]
+  }
+  .btn-cta {
+    @apply bg-primary h-[54px] rounded-[5px] px-[16px] tronsition-all durotion-300    
+  }
+  .btn-primary {
+    @apply bg-primary
+  }
+  .btn-secondary {
+    @apply bg-secondary
+  }
+  .btn-accent {
+    @apply text-accent hover:bg-accent-hover
+  }
+  .active {
+    @apply text-accent;
   }
 }
