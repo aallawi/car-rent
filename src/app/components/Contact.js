@@ -1,3 +1,10 @@
 export default function Contact() {
-  return <div>Contact</div>;
+  return (
+    <section
+      className="h-screen bg-green-500 text-[30px] flex justify-center items-center"
+      id="contact"
+    >
+      Contact
+    </section>
+  );
 }

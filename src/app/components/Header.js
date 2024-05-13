@@ -1,19 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-scroll";
 import Image from "next/image";
 import { RiMenu3Fill, RiCloseLargeLine } from "react-icons/ri";
+import { SearchContext } from "../context/searchContext";
 
 export default function Header() {
+  const { setSearchActive } = useContext(SearchContext);
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
 
   const isTabletOrMobile = useMediaQuery({
     query: "(min-width: 1300px)",
   });
-  console.log("header", header);
-  console.log("nav", nav);
 
   useEffect(() => {
     const handelScroll = () => {
@@ -21,6 +21,13 @@ export default function Header() {
         setHeader(true);
       } else {
         setHeader(false);
+      }
+
+      // search
+      if (window.scrollY > 800) {
+        setSearchActive(true);
+      } else {
+        setSearchActive(false);
       }
     };
 
@@ -32,15 +39,14 @@ export default function Header() {
   });
 
   return (
-    <div
+    <header
       className={`fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300 
       ${
-        header
-          ? " bg-white shadow-md py-2"
-          : " bg-transparent shadow-none py-4 "
+        header ? " bg-white shadow-md py-2" : " bg-transparent shadow-none py-4"
       }`}
     >
       <div className="flex flex-col mx-auto xl:container xl:flex-row xl:items-center xl:justify-between">
+        {/* logo */}
         <div className="flex items-center justify-between px-4">
           <Link
             to="home"
@@ -48,7 +54,13 @@ export default function Header() {
             spy={true}
             className="flex flex-col items-center justify-center cursor-pointer"
           >
-            <Image src="/images/car_logo.png" width={70} height={50} alt="" />
+            <Image
+              src="/images/car_logo.png"
+              width={70}
+              height={50}
+              alt="Car Rental"
+              priority
+            />
             <span className="logo">Car Rental</span>
           </Link>
           <div
@@ -113,6 +125,6 @@ export default function Header() {
           </Link>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }
