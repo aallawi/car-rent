@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import Image from "next/image";
 import { RiMenu3Fill, RiCloseLargeLine } from "react-icons/ri";
 import { SearchContext } from "../context/searchContext";
+import SearchMobile from "./SearchMobile";
 
 export default function Header() {
   const { setSearchActive } = useContext(SearchContext);
@@ -123,6 +124,7 @@ export default function Header() {
           >
             Contact
           </Link>
+          <SearchMobile />
         </nav>
       </div>
     </header>

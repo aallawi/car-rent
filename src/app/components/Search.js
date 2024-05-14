@@ -1,6 +1,9 @@
 "use client";
 import { useContext } from "react";
 import { SearchContext } from "../context/searchContext";
+import LocationSelection from "./LocationSelection";
+import DateSelection from "./DateSelection";
+import HoursSelection from "./HoursSelection";
 
 export default function Search() {
   const { searchActive } = useContext(SearchContext);
@@ -14,7 +17,10 @@ export default function Search() {
       } hidden xl:block w-full relative shadow-lg`}
     >
       <div className=" xl:h-full flex items-center px-[25px] xl:px-0">
-        <h4>Rent the car</h4>
+        {/* <h4>Rent the car</h4> */}
+        <LocationSelection />
+        <DateSelection />
+        <HoursSelection />
       </div>
     </div>
   );
