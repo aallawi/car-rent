@@ -25,7 +25,7 @@ export default function Header() {
       }
 
       // search
-      if (window.scrollY > 800) {
+      if (window.scrollY > 570) {
         setSearchActive(true);
       } else {
         setSearchActive(false);
@@ -42,17 +42,15 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300 
-      ${
-        header ? " bg-white shadow-md py-2" : " bg-transparent shadow-none py-4"
-      }`}
+      ${header ? " bg-white py-2" : " bg-transparent py-2"}`}
     >
-      <div className="flex flex-col mx-auto xl:container xl:flex-row xl:items-center xl:justify-between">
+      <div className="flex flex-col items-center mx-auto xl:container xl:flex-row xl:justify-between">
         {/* logo */}
-        <div className="flex items-center justify-between px-4">
+        <div className="flex items-center justify-between w-full px-4">
           <Link
             to="home"
-            smooth={isTabletOrMobile}
-            spy={true}
+            // smooth={isTabletOrMobile}
+            // spy={true}
             className="flex flex-col items-center justify-center cursor-pointer"
           >
             <Image
@@ -62,7 +60,7 @@ export default function Header() {
               alt="Car Rental"
               priority
             />
-            <span className="logo">Car Rental</span>
+            <span className="logo">Car Rent</span>
           </Link>
           <div
             className="cursor-pointer xl:hidden"
@@ -76,7 +74,7 @@ export default function Header() {
         <nav
           className={`${
             nav ? "max-h-max py-8 px-4 xl:py-0 xl:px-0" : "max-h-0 xl:max-h-max"
-          } flex flex-col w-full bg-white gap-y-6 overflow-hidden font-[700] text-center uppercase text-sm transition-all duration-150
+          } flex flex-col items-center w-full bg-white gap-y-6 overflow-hidden font-[700] text-center uppercase text-sm transition-all duration-150
            xl:flex-row xl:font-medium xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 xl:text-left xl:text-[15px] xl:normal-case`}
         >
           <Link

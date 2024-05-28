@@ -5,7 +5,7 @@ import { Menu } from "@headlessui/react";
 import { FaClock } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const all_hours = ["10:00 AM", "12:00 AM", "15:00 PM", "18:00 PM"];
+const all_hours = ["10:00 AM", "12:00 AM", "03:00 PM", "06:00 PM", "09:00 PM"];
 
 export default function HoursSelection() {
   const [hours, setHours] = useState("10:00 AM");
@@ -31,17 +31,19 @@ export default function HoursSelection() {
           </div>
         </Menu.Button>
         <Menu.Items
-          className="dropdown-menu shadow-lg absolute top-[-280px] xl:top-[80px] left-1/2 xl:left-0 z-10 
-        transform -translate-x-1/2 xl:-translate-x-0 text-sm w-full bg-[#004a79] max-w-[330px] py-[10px] rounded-[10px]"
+          className="dropdown-menu shadow-lg absolute top-[-250px] xl:top-[90px] left-1/2 xl:left-0 z-10 
+        transform -translate-x-1/2 xl:-translate-x-0 text-sm w-full bg-gray-50 max-w-[330px] py-[10px] rounded-[10px]"
         >
           {all_hours.map((item, index) => {
             return (
               <div
                 key={index}
-                className="cursor-pointer py-[10px] xl:pl-[25px] hover:bg-gray-50 transition-all duration-300 font-semibold hover:pl-[40px] text-[12px] uppercase"
+                className="cursor-pointer flex items-center gap-4 py-[10px] pl-[25px] hover:bg-cyan-400 transition-all duration-300 font-semibold hover:pl-[40px] text-[12px] uppercase"
                 onClick={() => setHours(item)}
               >
-                {item}
+                <span>{item}</span>
+                <FaArrowRightLong className=" text-accent text-[12px]" />
+                <span>{item}</span>
               </div>
             );
           })}

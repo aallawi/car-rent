@@ -11,10 +11,8 @@ export default function Search() {
   return (
     <div
       className={`${
-        searchActive
-          ? " bg-green-400 rounded-none xl:h-[80px]"
-          : " bg-red-400 rounded-[20px] py-[24px] xl:pr-[16px xl:h-[100px]"
-      } hidden xl:block w-full relative shadow-lg`}
+        searchActive && "py-[24px]"
+      } bg-cyan-400 hidden xl:h-[100px] rounded-[20px] xl:max-w-[1300px] xl:mx-auto xl:block w-full relative shadow-lg`}
     >
       <div className=" xl:h-full flex items-center px-[25px] xl:px-0">
         {/* <h4>Rent the car</h4> */}

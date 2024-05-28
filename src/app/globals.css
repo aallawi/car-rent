@@ -11,6 +11,13 @@
   font-size: 16px;
   color: #004a79;
 }
+.hero {
+  background-image: url("../../public/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 @layer base {
   body {
@@ -56,6 +63,6 @@
     @apply text-accent hover:bg-accent-hover
   }
   .active {
-    @apply text-accent;
+    @apply bg-accent px-[30px] py-[8px] rounded-[22px] text-white font-[800];
   }
 }

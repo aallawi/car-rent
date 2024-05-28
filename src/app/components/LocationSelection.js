@@ -5,11 +5,13 @@ import { Menu } from "@headlessui/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const all_Loactions = [
-  "Cairo International Airport",
-  "Salah Salem St, cairo",
-  "Al Haram, Giza",
+  "Cairo Airport",
+  "Cairo Sheikh Zayed",
+  "Luxor Airport",
+  "North Coast Marina Gate 5",
+  "Sharm El Sheikh Airport",
   "Shatebi, Alexandria",
-  "Luxor City, Luxor",
+  "Hurghada, Red Sea",
 ];
 
 export default function LocationSelection() {
@@ -34,15 +36,15 @@ export default function LocationSelection() {
           </div>
         </Menu.Button>
         <Menu.Items
-          className="dropdown-menu shadow-lg absolute top-[-230px] xl:top-[90px] left-1/2 xl:left-0 z-10 
-        transform -translate-x-1/2 xl:-translate-x-0 text-sm xl:text-left w-full bg-[#004a79] max-w-[330px] py-[10px] rounded-[10px]"
+          className="dropdown-menu shadow-lg absolute top-[-320px] xl:top-[90px] left-1/2 xl:left-0 z-10 
+        transform -translate-x-1/2 xl:-translate-x-0 text-sm xl:text-left w-full bg-gray-50 max-w-[330px] py-[10px] rounded-[10px]"
         >
           {all_Loactions.map((item, index) => {
             return (
               <div
                 onClick={() => setLoaction(item)}
                 key={index}
-                className=" cursor-pointer py-[10px] xl:pl-[25px] hover:bg-gray-50 transition-all duration-300 font-semibold hover:pl-[40px] text-[12px] uppercase"
+                className=" cursor-pointer py-[10px] xl:pl-[25px] hover:bg-cyan-400 transition-all duration-300 font-semibold hover:pl-[40px] text-[12px] uppercase"
               >
                 {item}
               </div>

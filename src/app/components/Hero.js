@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useContext } from "react";
 import { SearchContext } from "../context/searchContext";
@@ -7,8 +8,16 @@ import Search from "./Search";
 export default function Hero() {
   const { searchActive } = useContext(SearchContext);
   return (
-    <section className=" h-screen xl:h-[90vh] bg-slate-700" id="home">
-      <div className=" container mx-auto h-full xl:pt-[40px]">Hero</div>
+    <section className="hero h-screen xl:h-[90vh]" id="home">
+      <div className=" container mx-auto h-full xl:pt-[40px] text-[30px] flex justify-center items-center flex-col">
+        <div className="bg-white bg-opacity-70 mt-[80px] px-[20px] py-[40px] text-black text-center border-[2px] border-black">
+          <h1 className="font-bold pb-[10px]">RENT FIRST CLASS.</h1>
+          <h1 className="font-bold">PAY ECONOMY.</h1>
+          <p className="text-[24px] pt-[30px] text-black">
+            Premium car rental at affordable rates. Worldwide.
+          </p>
+        </div>
+      </div>
       {searchActive ? (
         <div className=" fixed top-[80px] z-10 w-full max-w-[1920px]">
           <Search />
