@@ -238,7 +238,7 @@ export default function Cars() {
                   {/* car button */}
                   <div>
                     <button className="btn bg-accent btn-lg mt-[30px] rounded-none">
-                      See Details
+                      Rent Now
                     </button>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ export default function Cars() {
           })}
         </Swiper>
       </div>
-      <div className="mt-[60px] w-[212px] mx-auto border-[3px] border-solid border-red-600">
+      <div className="mt-[40px] w-[212px] mx-auto border-[3px] border-solid border-red-600">
         <button className="w-[200px] btn btn-lg bg-accent m-[3px] rounded-none">
           See More
         </button>

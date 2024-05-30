@@ -29,7 +29,7 @@ export default function LocationSelection() {
                   Select Loaction
                 </div>
               </div>
-              <div className=" uppercase font-medium text-[12px] text-secondary text-center xl:ml-[25px] xl:text-left">
+              <div className=" uppercase font-medium text-[12px] text-secondary text-center xl:ml-[28px] xl:text-left">
                 {loaction}
               </div>
             </div>
