@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Cars from "./components/Cars";
 import About from "./components/About";
+import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -13,6 +13,7 @@ export default function Home() {
       <Hero />
       <Cars />
       <About />
+      <Reviews />
       <Contact />
       <Footer />
     </main>

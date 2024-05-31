@@ -19,6 +19,9 @@ export default function Search() {
         <LocationSelection />
         <DateSelection />
         <HoursSelection />
+        <button className="btn bg-accent h-[60px] max-w-[200px] mr-[20px]">
+          Show Cars
+        </button>
       </div>
     </div>
   );

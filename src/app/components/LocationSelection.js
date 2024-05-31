@@ -26,7 +26,7 @@ export default function LocationSelection() {
               <div className=" flex flex-col xl:flex-row items-center xl:gap-x-[8px] gap-y-[8px] xl:gap-y-0">
                 <FaMapMarkerAlt className=" text-accent" />
                 <div className=" text-[15px] uppercase font-[700]">
-                  Select Loaction
+                  Pick-up & return
                 </div>
               </div>
               <div className=" uppercase font-medium text-[12px] text-secondary text-center xl:ml-[28px] xl:text-left">

@@ -1,10 +1,31 @@
+import Image from "next/image";
+
 export default function Brands() {
   return (
-    <section
-      className="h-screen bg-emerald-600 text-[30px] flex justify-center items-center"
-      id="cars"
-    >
-      <div className="container mx-auto "></div>
-    </section>
+    <div className="grid grid-cols-3 gap-[25px] place-items-center lg:mx-[20px] mb-[40px] lg:flex lg:flex-wrap lg:gap-x-[25px] lg:justify-between">
+      <div>
+        <Image src="icons/brands/audi.svg" width={85} height={85} alt="icon" />
+      </div>
+      <div>
+        <Image src="icons/brands/bmw.svg" width={85} height={85} alt="icon" />
+      </div>
+      <div>
+        <Image src="icons/brands/ford.svg" width={85} height={85} alt="icon" />
+      </div>
+      <div>
+        <Image src="icons/brands/mazda.svg" width={85} height={85} alt="icon" />
+      </div>
+      <div>
+        <Image
+          src="icons/brands/mercedes.svg"
+          width={85}
+          height={85}
+          alt="icon"
+        />
+      </div>
+      <div>
+        <Image src="icons/brands/skoda.svg" width={85} height={85} alt="icon" />
+      </div>
+    </div>
   );
 }

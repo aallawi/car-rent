@@ -23,10 +23,12 @@ export default function DateSelection() {
   return (
     <Menu as="div" className="flex w-full xl:flex-row">
       <div className="relative flex-1 ">
-        <Menu.Button className="flex flex-col w-full h-full dropdown-btn justify-center items-center xl:items-start xl:pl-[30px]">
+        <Menu.Button className="flex flex-col w-full h-full dropdown-btn justify-center items-center xl:items-start xl:pl-[30px] xl:border-r xl:border-black/10">
           <div className=" flex flex-col xl:flex-row items-center xl:gap-x-[8px] gap-y-[8px] xl:gap-y-0">
             <FaCalendarAlt className=" text-accent" />
-            <div className=" text-[15px] uppercase font-[700]">Select Date</div>
+            <div className=" text-[15px] uppercase font-[700]">
+              Pick-up date
+            </div>
           </div>
           <div className=" flex items-center uppercase font-medium text-[12px] text-secondary gap-x-[12px] xl:ml-[25px]">
             <div>{format(date[0].startDate, "dd/MM/yyy")}</div>

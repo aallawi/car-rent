@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="h-screen xl:h-[90vh] bg-gray-200" id="home">
       <div className="xl:container mx-auto h-full pt-[100px] xl:pt-[50px] flex justify-between items-center flex-col xl:flex-row">
-        <div className="bg-[#ff5f00] text-white xl:text-black xl:bg-transparent w-full py-8 text-center xl:text-left xl:max-w-[600px]">
+        <div className="bg-[#ff5f00] pl-[25px] text-white xl:text-black xl:bg-transparent w-full py-8 text-center xl:text-left xl:max-w-[600px]">
           <h1 className="title text-[3vw] font-[800] pb-[20px]">
             RENT FIRST CLASS.
           </h1>

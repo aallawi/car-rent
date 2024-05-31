@@ -26,6 +26,16 @@
   line-height: 1;
 }
 
+.swiper-pagination {
+  padding-bottom: 20px !important;
+}
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-accent !important;
+}
 
 @layer base {
   body {
