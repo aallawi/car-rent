@@ -83,7 +83,7 @@ const clientReviews = [
 
 export default function App() {
   return (
-    <section className="bg-gray-200 py-[60px]" id="reviews">
+    <section className="py-[60px]" id="reviews">
       <div className="container mx-auto px-[20px]">
         <h1 className="text-[25px] text-accent font-[800] text-center mb-[10px]">
           Clients Reviews

@@ -11,7 +11,7 @@ const Reasons = [
 
 export default function App() {
   return (
-    <section className="bg-gray-200 py-[100px]" id="why">
+    <section className="py-[100px]" id="why">
       <div className="container mx-auto px-[20px]">
         <div className=" flex flex-col gap-[25px] xl:flex-row xl:items-center">
           <div className="flex-1 ">

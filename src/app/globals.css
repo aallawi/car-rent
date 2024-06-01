@@ -14,16 +14,16 @@
   font-size: 16px;
   color: #004a79;
 }
-.hero {
+/* .hero {
   background-image: url("../../public/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+} */
+
 .title {
   font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
-  line-height: 1;
 }
 
 .swiper-pagination {
@@ -36,6 +36,29 @@
 .swiper-pagination-bullet-active {
   @apply bg-accent !important;
 }
+
+/* ------------------ */
+.image-container {
+  width: 200px;
+  height: 400px; 
+  position: relative;
+}
+
+.center {
+  transform: translateY(90px);
+  z-index: 2;
+}
+
+.left {
+  transform: translate(25px, 120px) rotate(-10deg);
+  z-index: 1;
+}
+
+.right {
+  transform: translate(-25px, 120px) rotate(10deg);
+  z-index: 1;
+}
+/* --------------------------- */
 
 @layer base {
   body {

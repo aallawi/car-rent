@@ -162,10 +162,7 @@ const All_cars = [
 
 export default function Cars() {
   return (
-    <section
-      className="bg-gray-200 pt-[50px] xl:pt-[120px] pb-[60px]"
-      id="cars"
-    >
+    <section className="pt-[50px] xl:pt-[120px] pb-[60px]" id="cars">
       <div className="container mx-auto px-[20px]">
         <Brands />
         <h1 className=" mb-[30px] text-[25px] font-[800]">Our Collection</h1>
@@ -191,7 +188,7 @@ export default function Cars() {
                   </div>
                   <div className="border border-gray-300 border-dashed">
                     {/* price */}
-                    <div className="group-hover:bg-blue-800 transition-all duration-300 mt-[-40px] bg-gray-200 mx-auto text-center w-[200px] p-[10px] border border-black group-hover:border-blue-800">
+                    <div className="group-hover:bg-blue-800 transition-all duration-300 mt-[-40px] mx-auto text-center w-[200px] p-[10px] border border-black group-hover:border-blue-800">
                       <div className=" text-[16px] text-accent font-[600]">
                         ${car.price} / DAY
                       </div>
