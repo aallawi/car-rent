@@ -4,6 +4,8 @@ import { SearchContext } from "../context/searchContext";
 import LocationSelection from "./LocationSelection";
 import DateSelection from "./DateSelection";
 import HoursSelection from "./HoursSelection";
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 export default function Search() {
   const { searchActive } = useContext(SearchContext);

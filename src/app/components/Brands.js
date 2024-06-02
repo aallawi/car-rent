@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 export default function Brands() {
   return (

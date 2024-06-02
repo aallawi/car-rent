@@ -5,8 +5,10 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { Pagination } from "swiper/modules";
+
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 const clientReviews = [
   {
@@ -81,15 +83,15 @@ const clientReviews = [
   },
 ];
 
-export default function App() {
+export default function Testimonial() {
   return (
-    <section className="py-[60px]" id="reviews">
+    <section className="pt-[100px]" id="testimonial">
       <div className="container mx-auto px-[20px]">
         <h1 className="text-[25px] text-accent font-[800] text-center mb-[10px]">
-          Clients Reviews
+          Client Reviews
         </h1>
         <h1 className=" text-secondary text-[20px] mb-[20px] text-center">
-          Our Clients Say About Us
+          What Our Clients Say About Us
         </h1>
         <Swiper
           spaceBetween={30}

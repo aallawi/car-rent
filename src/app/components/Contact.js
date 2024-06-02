@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 export default function Contact() {
   return (
-    <section className="py-[100px]" id="contact">
+    <section className="pt-[100px]" id="contact">
       <div className="container mx-auto px-[20px]">
         <div className="flex flex-col items-center ">
           <div className="text-center ">
@@ -14,6 +16,24 @@ export default function Contact() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
               mollitia
             </p>
+            <div className="flex justify-center gap-[10px] mt-[30px]">
+              <button className="bg-gray-900 p-[10px] rounded-[6px]">
+                <Image
+                  src="/images/app-store.svg"
+                  width={130}
+                  height={35}
+                  alt="app store"
+                />
+              </button>
+              <button className="bg-gray-900 p-[10px] rounded-[6px]">
+                <Image
+                  src="/images/google-play.svg"
+                  width={130}
+                  height={35}
+                  alt="google play"
+                />
+              </button>
+            </div>
           </div>
           <div className="flex items-end justify-center overflow-hidden px-[10px]">
             <div className="relative w-[200px] h-[400px] left">

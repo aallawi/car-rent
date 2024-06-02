@@ -38,12 +38,6 @@
 }
 
 /* ------------------ */
-.image-container {
-  width: 200px;
-  height: 400px; 
-  position: relative;
-}
-
 .center {
   transform: translateY(90px);
   z-index: 2;

@@ -6,6 +6,8 @@ import Image from "next/image";
 import { RiMenu3Fill, RiCloseLargeLine } from "react-icons/ri";
 import { SearchContext } from "../context/searchContext";
 import SearchMobile from "./SearchMobile";
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 export default function Header() {
   const { setSearchActive } = useContext(SearchContext);
@@ -112,6 +114,15 @@ export default function Header() {
             spy={true}
           >
             About
+          </Link>
+          <Link
+            className="cursor-pointer"
+            to="testimonial"
+            activeClass="active"
+            smooth={isTabletOrMobile}
+            spy={true}
+          >
+            Testimonial
           </Link>
           <Link
             className="cursor-pointer"

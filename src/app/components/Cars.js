@@ -5,6 +5,8 @@ import ReactStars from "react-rating-stars-component";
 import Image from "next/image";
 import "swiper/css";
 import Brands from "./Brands";
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 const All_cars = [
   {
@@ -162,7 +164,7 @@ const All_cars = [
 
 export default function Cars() {
   return (
-    <section className="pt-[50px] xl:pt-[120px] pb-[60px]" id="cars">
+    <section className="pt-[50px] xl:pt-[120px]" id="cars">
       <div className="container mx-auto px-[20px]">
         <Brands />
         <h1 className=" mb-[30px] text-[25px] font-[800]">Our Collection</h1>

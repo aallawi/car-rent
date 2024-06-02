@@ -2,6 +2,8 @@
 import Image from "next/image";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { motion, easeInOut } from "framer-motion";
+import { fadeIn } from "/variants";
 
 import {
   MdOutlineDirectionsCar,
