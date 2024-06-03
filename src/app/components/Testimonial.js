@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-import { motion, easeInOut } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "/variants";
 
 const clientReviews = [
@@ -87,27 +87,44 @@ export default function Testimonial() {
   return (
     <section className="pt-[100px]" id="testimonial">
       <div className="container mx-auto px-[20px]">
-        <h1 className="text-[25px] text-accent font-[800] text-center mb-[10px]">
-          Client Reviews
-        </h1>
-        <h1 className=" text-secondary text-[20px] mb-[20px] text-center">
-          What Our Clients Say About Us
-        </h1>
-        <Swiper
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="bg-white mySwiper rounded-tl-[80px] rounded-br-[80px]"
+        <motion.h1
+          variants={fadeIn("down", 0.4)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.6 }}
+          className="text-[25px] text-secondary font-[800] text-center mb-[10px]"
         >
-          {clientReviews.map((review, index) => {
-            return (
-              <SwiperSlide
-                key={index}
-                className=" flex justify-center items-center text-center py-[40px] px-[40px] rounded-tl-[20px]"
-              >
-                <div className="">
+          Client Reviews
+        </motion.h1>
+        <motion.h1
+          variants={fadeIn("down", 0.6)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.6 }}
+          className=" text-primary text-[20px] mb-[20px] text-center"
+        >
+          What Our Clients Say About Us
+        </motion.h1>
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.6 }}
+        >
+          <Swiper
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="bg-white mySwiper rounded-tl-[80px] rounded-br-[80px]"
+          >
+            {clientReviews.map((review, index) => {
+              return (
+                <SwiperSlide
+                  key={index}
+                  className=" flex justify-center items-center text-center py-[40px] px-[40px] rounded-tl-[20px]"
+                >
                   <div className="w-[100px] h-[100px] flex justify-center items-center mx-auto mb-[30px] border border-white rounded-full shadow-lg relative">
                     <Image
                       className="rounded-full"
@@ -121,7 +138,7 @@ export default function Testimonial() {
                   <h1 className=" title text-[25px] font-[700]">
                     {review.name}
                   </h1>
-                  <span className=" text-[18px] text-secondary">
+                  <span className=" text-[18px] text-primary">
                     {review.position}
                   </span>
                   <div className="flex max-w-[1000px] mx-auto gap-[12px] mt-[25px] mb-[60px]">
@@ -133,11 +150,11 @@ export default function Testimonial() {
                       <FaQuoteRight />
                     </span>
                   </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </motion.div>
       </div>
     </section>
   );

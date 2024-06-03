@@ -2,24 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font Logo */
-@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
-
 * {
   font-family: "Annie Use Your Telescope", cursive;
 }
 
-.logo {
-  font-weight: 800;
-  font-size: 16px;
-  color: #004a79;
+/* Font Logo */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.font-logo {
+  font-family: "Shadows Into Light", cursive;
 }
-/* .hero {
-  background-image: url("../../public/images/hero.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} */
+
+.hero {
+  @media screen and (min-width : 1024px) {
+    background-image: url("../../public/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
 
 .title {
   font-family: 'Work Sans', sans-serif;
@@ -34,21 +35,21 @@
   height: 12px !important;
 }
 .swiper-pagination-bullet-active {
-  @apply bg-accent !important;
+  @apply bg-secondary !important;
 }
 
 /* ------------------ */
-.center {
+.Img-center {
   transform: translateY(90px);
   z-index: 2;
 }
 
-.left {
+.Img-left {
   transform: translate(25px, 120px) rotate(-10deg);
   z-index: 1;
 }
 
-.right {
+.Img-right {
   transform: translate(-25px, 120px) rotate(10deg);
   z-index: 1;
 }
@@ -59,45 +60,15 @@
     @apply text-primary bg-body;
   }
   p {
-    @apply text-secondary;
-  }
-  .h1 {
-    @apply text-[36px] xl:text-[64px] text-primary xl:leading-[72px] font-[800] mb-[18px];
-  }
-  .h2 {
-    @apply text-[36px] mb-[24px] font-[700]
-  }
-  .h3 {
-    @apply text-[20px] mb-[16px] font-[600]
-  }
-  .description {
-    @apply text-[16px] xl:text-[20px] xl:leading-[32px]
-  }
-  .section {
-    @apply w-full h-screen pt-[60px] xl:pt-[120px]
+    @apply text-primary;
   }
   .btn {
     @apply rounded-[10px] w-full uppercase font-medium text-white tracking-[2px] text-[13px] flex justify-center items-center transition-all duration-300;
   }
-  .btn-sm {
-    @apply h-[56px]
-  }
-  .btn-lg {
-    @apply h-[64px]
-  }
-  .btn-cta {
-    @apply bg-primary h-[54px] rounded-[5px] px-[16px] tronsition-all durotion-300    
-  }
-  .btn-primary {
-    @apply bg-primary
-  }
   .btn-secondary {
-    @apply bg-secondary
-  }
-  .btn-accent {
-    @apply text-accent hover:bg-accent-hover
+    @apply text-secondary hover:bg-secondary-hover
   }
   .active {
-    @apply bg-accent px-[30px] py-[8px] rounded-[22px] text-white font-[800];
+    @apply bg-secondary px-[30px] py-[8px] rounded-[22px] text-white font-[800];
   }
 }

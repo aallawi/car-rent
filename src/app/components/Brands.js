@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { motion, easeInOut } from "framer-motion";
-import { fadeIn } from "/variants";
 
 export default function Brands() {
   return (
-    <div className="grid grid-cols-3 gap-[25px] place-items-center lg:mx-[20px] mb-[40px] lg:flex lg:flex-wrap lg:gap-x-[25px] lg:justify-between">
+    <div className="grid grid-cols-3 gap-[25px] place-items-center lg:mx-[20px] mb-[40px] mt-[30px] xl:mt-[0] lg:flex lg:flex-wrap lg:gap-x-[25px] lg:justify-between">
       <div>
         <Image src="icons/brands/audi.svg" width={85} height={85} alt="icon" />
       </div>

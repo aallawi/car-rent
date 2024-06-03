@@ -22,7 +22,9 @@ export default function Footer() {
                   alt="Car Rental"
                   priority
                 />
-                <span className="logo">Car Rent</span>
+                <span className="font-logo text-[18px] font-[800]">
+                  Car Rent
+                </span>
               </Link>
             </div>
             <p className="my-[30px] text-[12px]">
@@ -62,13 +64,13 @@ export default function Footer() {
           <div className="flex-1">
             <h4 className="font-[600] text-[18px] mb-6">Newsletter</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div className="flex items-center gap-2 mt-6 h-[45px]">
+            <div className="flex items-center gap-1 mt-6 h-[40px]">
               <input
-                className="flex-1 p-2 border rounded-md outline-none border-secondary"
+                className="flex-1 h-full p-2 border rounded-none outline-none border-primary"
                 type="text"
                 placeholder="Your Email"
               />
-              <button className="h-full px-2 btn bg-accent max-w-[150px]">
+              <button className="h-full px-2 btn rounded-none bg-secondary max-w-[150px]">
                 Submit
               </button>
             </div>

@@ -2,8 +2,6 @@
 
 import Why from "./Why";
 import Convenience from "./Convenience";
-import { motion, easeInOut } from "framer-motion";
-import { fadeIn } from "/variants";
 
 export default function About() {
   return (

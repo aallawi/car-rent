@@ -19,18 +19,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#101828",
-        secondary: "#667085",
-        accent: {
-          DEFAULT: "#ED1D24",
+        primary: {
+          DEFAULT: "#34495e",
+          hover: "#22313f",
+        },
+        secondary: {
+          DEFAULT: "#22d3ee",
           hover: "#dd242a",
         },
-        body: "#dedede",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        body: "#e4f1fe",
       },
     },
   },

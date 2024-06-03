@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { MdSwipeRightAlt } from "react-icons/md";
-import { motion, easeInOut } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "/variants";
 
 const Reasons = [
@@ -13,35 +13,58 @@ const Reasons = [
 
 export default function App() {
   return (
-    <section className="pt-[100px]" id="why">
+    <div className="pt-[100px]">
       <div className="container mx-auto px-[20px]">
         <div className=" flex flex-col gap-[25px] xl:flex-row xl:items-center">
-          <div className="flex-1 ">
+          <motion.div
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.6 }}
+            className="flex-1 "
+          >
             <Image src="/images/why2.png" width={1000} height={200} />
-          </div>
+          </motion.div>
           <div className="flex-1 ">
-            <h1 className="pb-[30px] font-[800] text-[28px] title">
+            <motion.h1
+              variants={fadeIn("left", 0.4)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.6 }}
+              className="pb-[30px] font-[800] text-[28px] title"
+            >
               We Are The Best In The Business.
-            </h1>
-            <p>
+            </motion.h1>
+            <motion.p
+              variants={fadeIn("left", 0.4)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.6 }}
+            >
               Lorem ipsum dolor sit amet consectetur. Donec fringilla diam
               ultrices lacus etiam. Scelerisque in est quis interdum. Elit odio
               massa donec risus congue eu vitae. Mauris morbi commodo mi
               parturient condimentum quam porttitor.
-            </p>
-            <div className="mt-[40px]">
+            </motion.p>
+            <motion.div
+              variants={fadeIn("left", 0.4)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.6 }}
+              className="mt-[40px]"
+            >
               {Reasons.map((item, index) => {
                 return (
                   <div key={index} className="flex items-center gap-[8px]">
-                    <MdSwipeRightAlt size={40} color="red" />
+                    <MdSwipeRightAlt size={40} color="bg-primary" />
                     <p>{item}</p>
                   </div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

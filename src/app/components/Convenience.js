@@ -2,8 +2,6 @@
 import Image from "next/image";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { motion, easeInOut } from "framer-motion";
-import { fadeIn } from "/variants";
 
 import {
   MdOutlineDirectionsCar,
@@ -28,41 +26,41 @@ export default function Convenience() {
           </p>
           <div className="flex items-center xl:justify-start justify-center mb-[30px] gap-x-8">
             <div className="flex flex-col items-center w-[100px]">
-              <MdOutlineDirectionsCar className="text-[50px] text-accent" />
+              <MdOutlineDirectionsCar className="text-[50px] text-primary" />
               <div className="text-[30px] font-black">
                 {inView ? (
                   <CountUp start={0} end={50} duration={3} delay={1} />
                 ) : null}
                 +
               </div>
-              <div className="text-[13px] font-semibold text-secondary">
+              <div className="text-[13px] font-semibold text-primary">
                 car <br /> types
               </div>
             </div>
             <div className="flex flex-col items-center w-[100px]">
-              <MdOutlineHomeWork className="text-[50px] text-accent" />
+              <MdOutlineHomeWork className="text-[50px] text-primary" />
               <div className="text-[30px] font-black">
                 {inView ? (
                   <CountUp start={0} end={11} duration={3} delay={1} />
                 ) : null}{" "}
               </div>
-              <div className="text-[13px] font-semibold text-secondary">
+              <div className="text-[13px] font-semibold text-primary">
                 Rental <br /> Outlets
               </div>
             </div>
             <div className="flex flex-col items-center w-[100px]">
-              <MdOutlineBuildCircle className="text-[50px] text-accent" />
+              <MdOutlineBuildCircle className="text-[50px] text-primary" />
               <div className="text-[30px] font-black">
                 {inView ? (
                   <CountUp start={0} end={23} duration={3} delay={1} />
                 ) : null}
               </div>
-              <div className="text-[13px] font-semibold text-secondary">
+              <div className="text-[13px] font-semibold text-primary">
                 Repair <br /> Opints
               </div>
             </div>
           </div>
-          <button className="btn bg-accent btn-xl my-[30px] mx-auto xl:ml-[15px] rounded-none max-w-[350px]">
+          <button className="btn bg-primary hover:bg-primary-hover text-[18px] btn-xl my-[30px] mx-auto xl:ml-[15px] rounded-none max-w-[350px] h-[60px]">
             See all cars
           </button>
         </div>

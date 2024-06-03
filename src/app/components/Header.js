@@ -6,8 +6,6 @@ import Image from "next/image";
 import { RiMenu3Fill, RiCloseLargeLine } from "react-icons/ri";
 import { SearchContext } from "../context/searchContext";
 import SearchMobile from "./SearchMobile";
-import { motion, easeInOut } from "framer-motion";
-import { fadeIn } from "/variants";
 
 export default function Header() {
   const { setSearchActive } = useContext(SearchContext);
@@ -62,7 +60,7 @@ export default function Header() {
               alt="Car Rental"
               priority
             />
-            <span className="logo">Car Rent</span>
+            <span className="font-logo text-[18px] font-[800]">Car Rent</span>
           </Link>
           <div
             className="cursor-pointer xl:hidden"
@@ -75,7 +73,7 @@ export default function Header() {
         {/* nav */}
         <nav
           className={`${
-            nav ? "max-h-max py-8 px-4 xl:py-0 xl:px-0" : "max-h-0 xl:max-h-max"
+            nav ? "max-h-max py-2 px-4 xl:py-0 xl:px-0" : "max-h-0 xl:max-h-max"
           } flex flex-col items-center w-full bg-white gap-y-6 overflow-hidden font-[700] text-center uppercase text-sm transition-all duration-150
            xl:flex-row xl:font-medium xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 xl:text-left xl:text-[15px] xl:normal-case`}
         >
@@ -85,6 +83,7 @@ export default function Header() {
             activeClass="active"
             smooth={isTabletOrMobile}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             Home
           </Link>
@@ -94,17 +93,9 @@ export default function Header() {
             activeClass="active"
             smooth={isTabletOrMobile}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             Cars
-          </Link>
-          <Link
-            className="bg-pink-300 cursor-pointer xl:hidden"
-            to="/"
-            activeClass="active"
-            smooth={isTabletOrMobile}
-            spy={true}
-          >
-            See All Cars
           </Link>
           <Link
             className="cursor-pointer"
@@ -112,6 +103,7 @@ export default function Header() {
             activeClass="active"
             smooth={isTabletOrMobile}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             About
           </Link>
@@ -121,6 +113,7 @@ export default function Header() {
             activeClass="active"
             smooth={isTabletOrMobile}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             Testimonial
           </Link>
@@ -130,6 +123,7 @@ export default function Header() {
             activeClass="active"
             smooth={isTabletOrMobile}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             Contact
           </Link>
