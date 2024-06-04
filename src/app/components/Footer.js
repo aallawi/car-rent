@@ -27,7 +27,7 @@ export default function Footer() {
                 </span>
               </Link>
             </div>
-            <p className="my-[30px] text-[12px]">
+            <p className="my-[20px] text-[12px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <div className="flex flex-col gap-2">
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex-1">
-            <h4 className="font-[600] text-[18px] mb-6 cursor-pointer">
+            <h4 className="font-[600] text-[18px] mb-8 cursor-pointer">
               Company
             </h4>
             <p className="mb-3 cursor-pointer">New York</p>
@@ -50,8 +50,8 @@ export default function Footer() {
             <p className="mb-3 cursor-pointer">How we work</p>
           </div>
           <div className="flex-1">
-            <h4 className="font-[600] text-[18px] mb-6">Work Hours</h4>
-            <div className="flex gap-2 mb-3">
+            <h4 className="font-[600] text-[18px] mb-8">Work Hours</h4>
+            <div className="flex flex-row gap-2 mb-3">
               <p>Mon-Fri:</p> <span>9:00AM - 9:00PM</span>
             </div>
             <div className="flex gap-2 mb-3">
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex-1">
-            <h4 className="font-[600] text-[18px] mb-6">Newsletter</h4>
+            <h4 className="font-[600] text-[18px] mb-8">Newsletter</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div className="flex items-center gap-1 mt-6 h-[40px]">
               <input

@@ -29,7 +29,7 @@ export default function HeroImage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.6 }}
-            className="title text-[1vw] font-[600] pt-[30px]"
+            className="title text-[18px] font-[600] pt-[30px]"
           >
             Premium car rental at affordable rates. Worldwide.
           </motion.h6>

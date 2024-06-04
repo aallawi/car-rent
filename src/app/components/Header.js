@@ -61,7 +61,7 @@ export default function Header() {
       className={`fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300 
       ${header ? " bg-white py-2" : " bg-transparent py-2 shadow-md"}`}
     >
-      <div className="flex flex-col items-center h-[60px] mx-auto xl:container xl:flex-row xl:justify-between">
+      <div className="flex flex-col items-center mx-auto xl:container xl:flex-row xl:justify-between">
         {/* logo */}
         <div className="flex items-center justify-between w-full px-4 xl:w-auto">
           <Link

@@ -236,7 +236,7 @@ export default function Cars() {
                                 height={24}
                                 alt=""
                               />
-                              <div className="text-[5px] text-primary">
+                              <div className="text-[16px] text-primary">
                                 {item.text}
                               </div>
                             </div>

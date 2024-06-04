@@ -23,7 +23,7 @@ export default function App() {
             viewport={{ once: false, amount: 0.6 }}
             className="flex-1 "
           >
-            <Image src="/images/why2.png" width={1000} height={200} />
+            <Image src="/images/why.png" width={1000} height={200} />
           </motion.div>
           <div className="flex-1 ">
             <motion.h1
