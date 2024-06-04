@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SearchContextProvider } from "./context/searchContext";
+import Loader from "./Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <SearchContextProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <Loader>{children}</Loader>
+        </body>
       </html>
     </SearchContextProvider>
   );

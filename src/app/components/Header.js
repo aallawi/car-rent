@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
 import { useMediaQuery } from "react-responsive";
-import { Link } from "react-scroll";
+import { Link, Element, Events, scrollSpy } from "react-scroll";
 import Image from "next/image";
 import { RiMenu3Fill, RiCloseLargeLine } from "react-icons/ri";
 import { SearchContext } from "../context/searchContext";
@@ -12,9 +12,9 @@ export default function Header() {
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
 
-  const isTabletOrMobile = useMediaQuery({
-    query: "(min-width: 1300px)",
-  });
+  // const isTabletOrMobile = useMediaQuery({
+  //   query: "(min-width: 1300px)",
+  // });
 
   useEffect(() => {
     const handelScroll = () => {
@@ -39,17 +39,34 @@ export default function Header() {
     };
   });
 
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function (to, element) {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register("end", function (to, element) {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
   return (
     <header
-      className={`fixed w-full max-w-[1920px] mx-auto z-20 transition-all shadow-md duration-300 
-      ${header ? " bg-white py-2" : " bg-transparent py-2"}`}
+      className={`fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300 
+      ${header ? " bg-white py-2" : " bg-transparent py-2 shadow-md"}`}
     >
-      <div className="flex flex-col items-center mx-auto xl:container xl:flex-row xl:justify-between">
+      <div className="flex flex-col items-center h-[60px] mx-auto xl:container xl:flex-row xl:justify-between">
         {/* logo */}
         <div className="flex items-center justify-between w-full px-4 xl:w-auto">
           <Link
             to="home"
-            // smooth={isTabletOrMobile}
+            // smooth={true}
             // spy={true}
             className="flex flex-col items-center justify-center cursor-pointer"
           >
@@ -78,50 +95,52 @@ export default function Header() {
            xl:flex-row xl:font-medium xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 xl:text-left xl:text-[15px] xl:normal-case`}
         >
           <Link
-            className="cursor-pointer"
+            className="cursor-pointer font-[700]"
             to="home"
             activeClass="active"
-            smooth={isTabletOrMobile}
+            smooth={true}
             spy={true}
             onClick={() => setNav(!nav)}
           >
             Home
           </Link>
           <Link
-            className="cursor-pointer"
+            className="cursor-pointer font-[700]"
             to="cars"
             activeClass="active"
-            smooth={isTabletOrMobile}
+            smooth={true}
             spy={true}
+            offset={-100}
             onClick={() => setNav(!nav)}
           >
             Cars
           </Link>
           <Link
-            className="cursor-pointer"
+            className="cursor-pointer font-[700]"
             to="about"
             activeClass="active"
-            smooth={isTabletOrMobile}
+            smooth={true}
             spy={true}
+            offset={-60}
             onClick={() => setNav(!nav)}
           >
             About
           </Link>
           <Link
-            className="cursor-pointer"
+            className="cursor-pointer font-[700]"
             to="testimonial"
             activeClass="active"
-            smooth={isTabletOrMobile}
+            smooth={true}
             spy={true}
             onClick={() => setNav(!nav)}
           >
             Testimonial
           </Link>
           <Link
-            className="cursor-pointer"
+            className="cursor-pointer font-[700]"
             to="contact"
             activeClass="active"
-            smooth={isTabletOrMobile}
+            smooth={true}
             spy={true}
             onClick={() => setNav(!nav)}
           >

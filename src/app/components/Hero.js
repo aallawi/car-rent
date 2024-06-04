@@ -54,7 +54,7 @@ export default function HeroImage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.2 }}
-          className=" mt-[-50px] w-full max-w-[1300px] mx-auto"
+          className=" mt-[-40px] w-full max-w-[1300px] mx-auto"
         >
           <Search />
         </motion.div>

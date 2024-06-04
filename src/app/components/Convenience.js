@@ -18,7 +18,9 @@ export default function Convenience() {
     <div ref={ref} className="flex flex-col xl:flex-row xl:justify-between">
       <div className="flex items-center justify-center flex-1 text-center xl:text-left">
         <div className="xl:max-w-[500px]">
-          <h2 className="h2">Car services simplified.</h2>
+          <h2 className="mb-[30px] text-[25px] font-[800]">
+            Car services simplified.
+          </h2>
           <p className=" text-[14px] mb-[40px] max-w-[500px]">
             Rent, choose, and repair with ease. Our convenient locations,
             diverse car types, and reliable repair points ensure a seamless car
